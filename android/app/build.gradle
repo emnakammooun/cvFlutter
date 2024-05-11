@@ -62,6 +62,12 @@ android {
 
 flutter {
     source '../..'
+    android {
+        defaultConfig {
+            minSdkVersion 20
+        }
+    }
+
 }
 
 dependencies {}
