@@ -15,18 +15,18 @@ class SkillsMobile extends StatelessWidget {
       child: Consumer<YoussefUiProvider>(
         builder: (context, uiProvider, _) {
           final backgroundColor =
-              uiProvider.isDark ? CustomColor.bgLight2 : Colors.grey[200];
+          uiProvider.isDark ? CustomColor.bgLight2 : Colors.grey[200];
           final textColor = uiProvider.isDark ? Colors.white : Colors.black;
 
           return Column(
             children: [
               SizedBox(height: 0),
-              _buildSkillItem('Angular', 0.8),
-              _buildSkillItem('Laravel', 0.7),
-              _buildSkillItem('Flutter', 0.9),
-              _buildSkillItem('React Js', 0.8),
-              _buildSkillItem('Django', 0.7),
-              _buildSkillItem('Vue Js', 0.8),
+              _buildSkillItem('Angular', 0.8, textColor),
+              _buildSkillItem('Laravel', 0.7, textColor),
+              _buildSkillItem('Flutter', 0.9, textColor),
+              _buildSkillItem('React Js', 0.8, textColor),
+              _buildSkillItem('Django', 0.7, textColor),
+              _buildSkillItem('Vue Js', 0.8, textColor),
             ],
           );
         },
@@ -34,7 +34,7 @@ class SkillsMobile extends StatelessWidget {
     );
   }
 
-  Widget _buildSkillItem(String skillName, double skillLevel) {
+  Widget _buildSkillItem(String skillName, double skillLevel, Color textColor) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 7.0),
       child: Row(
@@ -43,7 +43,7 @@ class SkillsMobile extends StatelessWidget {
             width: 120,
             child: Text(
               skillName,
-              style: TextStyle(fontSize: 20),
+              style: TextStyle(fontSize: 20, color: textColor), // Set text color here
             ),
           ),
           Expanded(

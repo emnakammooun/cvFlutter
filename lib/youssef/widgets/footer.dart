@@ -12,7 +12,8 @@ class Footer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<YoussefUiProvider>(
       builder: (context, uiProvider, _) {
-        final backgroundColor = uiProvider.isDark ? CustomColor.scaffoldBg : Colors.white;
+        final greyClairColor = Color(0xFFCCCCCC);
+        final backgroundColor = uiProvider.isDark ? CustomColor.scaffoldBg : greyClairColor;
         final textColor = uiProvider.isDark ? Colors.white : CustomColor.scaffoldBg;
 
         return Container(

@@ -96,6 +96,19 @@ class _ExperienceState extends State<Experience> {
                         ],
                       ),
                     ),
+                    GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          isDescriptionVisible = !isDescriptionVisible;
+                        });
+                      },
+                      child: Icon(
+                        isDescriptionVisible
+                            ? Icons.keyboard_arrow_up
+                            : Icons.keyboard_arrow_down,
+                        color: textColor,
+                      ),
+                    ),
                     // Arrow icon to toggle description visibility
                     GestureDetector(
                       onTap: () {
